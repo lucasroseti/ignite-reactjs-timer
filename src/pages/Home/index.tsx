@@ -6,8 +6,7 @@ import * as zod from 'zod'
 
 import { CyclesContext } from '../../contexts/CyclesContext'
 
-import { NewCycleForm } from './components/NewCycleForm'
-import { Countdown } from './components/Countdown'
+import { Countdown, NewCycleForm } from './components'
 
 import {
   HomeContainer,
@@ -53,6 +52,7 @@ export function Home() {
         <FormProvider {...newCycleForm}>
           <NewCycleForm />
         </FormProvider>
+
         <Countdown />
 
         {activeCycle ? (

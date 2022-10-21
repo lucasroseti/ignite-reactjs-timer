@@ -56,7 +56,9 @@ export function Countdown() {
   ])
 
   useEffect(() => {
-    if (activeCycle) document.title = `${minutes}: ${seconds}`
+    document.title = activeCycle
+      ? `${minutes}: ${seconds}`
+      : 'Tarefa finalizada!'
   }, [activeCycle, minutes, seconds])
 
   return (
